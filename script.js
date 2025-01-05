@@ -40,7 +40,7 @@ boxes.forEach((box) => {
         console.log(count);
 
         checkWinner();
-    });
+    })
 });
 
 
@@ -71,8 +71,6 @@ const checkWinner = () => {
         let pos1 = boxes[pattern[0]].innerText;
         let pos2 = boxes[pattern[1]].innerText;
         let pos3 = boxes[pattern[2]].innerText;
-        console.log(pattern);
-        console.log([pos1, pos2, pos3])
 
         if(pos1 != "" && pos2 != "" && pos3 != "") {
             if(pos1 === pos2 && pos2 === pos3) {
