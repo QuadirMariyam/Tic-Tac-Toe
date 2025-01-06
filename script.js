@@ -57,9 +57,6 @@ const enableBoxes = () => {
         box.disabled = false;
         box.innerText = "";
         count = 0;
-        if(count%2 == 0) {
-            document.querySelector(".box").style.color = "#005377";
-        }
     }
 };
 
