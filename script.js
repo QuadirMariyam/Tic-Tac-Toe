@@ -30,14 +30,15 @@ boxes.forEach((box) => {
     box.addEventListener("click", () => {
         if(turnO) {
             box.innerText = "O";
+            box.style.color = "#FFC0CB";
             turnO = false;
         } else {
             box.innerText = "X";
+            box.style.color = "#ADD8E6";
             turnO = true;
         }
         box.disabled = true;
         count++;
-        console.log(count);
 
         checkWinner();
     })
@@ -56,6 +57,9 @@ const enableBoxes = () => {
         box.disabled = false;
         box.innerText = "";
         count = 0;
+        if(count%2 == 0) {
+            document.querySelector(".box").style.color = "#005377";
+        }
     }
 };
 
